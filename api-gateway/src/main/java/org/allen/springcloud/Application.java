@@ -1,7 +1,7 @@
 package org.allen.springcloud;
 
 import org.allen.springcloud.filter.AccessFilter;
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +16,6 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class);
+        new SpringApplicationBuilder(Application.class).web(true).run(args);
     }
 }

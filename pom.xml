@@ -11,6 +11,7 @@
         <module>register-center</module>
         <module>user-microservice</module>
         <module>api-gateway</module>
+        <module>user-consumer</module>
     </modules>
     <packaging>pom</packaging>
 

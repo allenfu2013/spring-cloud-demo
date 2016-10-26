@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+.idea/
+api-gateway/api-gateway.iml
+api-gateway/target
+register-center/register-center.iml
+register-center/target
+spring-cloud-demo.iml
+user-microservice/user-microservice.iml
+user-microservice/target
+target/

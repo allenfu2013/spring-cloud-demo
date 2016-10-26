@@ -10,21 +10,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.HashMap;
-import java.util.Map;
-
 @RestController
-@RequestMapping("api")
+@RequestMapping("user")
 public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     RestTemplate restTemplate;
 
-    @RequestMapping(value = "/user/getByUserId", method = RequestMethod.GET)
+    @RequestMapping(value = "/getByUserId", method = RequestMethod.GET)
     public User getByUserId(@RequestParam Long userId) {
         logger.info(String.format("[/user/getByUserId] userId:%s", userId));
-        User user = restTemplate.getForObject("http://user-service/getByUserId?userId={userId}", User.class, userId);
+        User user = restTemplate.getForObject("http://user-service/user/getByUserId?userId={userId}", User.class, userId);
         return user;
     }
 }

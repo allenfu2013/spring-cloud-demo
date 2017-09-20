@@ -12,6 +12,8 @@
         <module>user-microservice</module>
         <module>api-gateway</module>
         <module>user-consumer</module>
+        <module>zookeeper-registry</module>
+        <module>zookeeper-consumer</module>
     </modules>
     <packaging>pom</packaging>
 

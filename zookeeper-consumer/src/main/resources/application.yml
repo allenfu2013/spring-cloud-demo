@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: zookeeper-consumer
+
+
+#断路器，断路器跳闸后等待多长时间重试
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        sleepWindowInMilliseconds: 1000
+    execution:
+      isolation:
+        thread:
+           timeoutInMilliseconds: 5000
+#ribbon连接到服务端的超时时间
+ribbon:
+  ConnectTimeout: 5000
+#ribbon连接到服务端后，多长时间没有获取到响应的超时时间
+  ReadTimeout: 5000

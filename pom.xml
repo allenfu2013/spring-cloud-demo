@@ -14,21 +14,32 @@
         <module>user-consumer</module>
         <module>zookeeper-registry</module>
         <module>zookeeper-consumer</module>
+        <module>eureka-server</module>
+        <module>eureka-provider</module>
+        <module>zipkin-server</module>
     </modules>
     <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.5.RELEASE</version>
+        <version>1.3.7.RELEASE</version>
     </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.18</version>
+        </dependency>
+    </dependencies>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Brixton.RELEASE</version>
+                <version>Brixton.SR5</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
